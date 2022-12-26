@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn, .btn__operador {
+  border: none;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 0.1px 0.1px black;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  width: 300px;
+  background-color: #ebebe3;
+  height: 300px;
+  height: auto;
+  padding: 0.1rem;
+}
+
+.calc__display {
+  height: 30px;
+  background-color: white;
+  margin: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.calc__display p {
+  font-size: 1.5rem;
+}
+
+.calc__corpo {
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  grid-template-rows: 50px 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.container__aritimeticos {
+  grid-column: span 2;
+  grid-row: 1/1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn__result {
+  height: 90%;
+  width: 95%;
+  margin: 3px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #03a9f4;
+  border: none;
+}
+
+.btn__operador {
+  width: 23.75%;
+  margin: 1px;
+  font-size: 1.5rem;
+  background-color: #f0f0f0;
+}
+
+.container__numeros {
+  grid-column: 1/1;
+  grid-row: 2/2;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #f6f7f8;
+  height: 100%;
+}
+
+.btn {
+  min-width: 31.6666666667%;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #161717;
+  font-size: 2rem;
+  margin: 1px;
+}
+
+.btn__fim {
+  width: 47.5%;
+}/*# sourceMappingURL=style.css.map */
