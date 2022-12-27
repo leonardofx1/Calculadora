@@ -10,6 +10,10 @@
 }
 
 body {
+  background-color: #31233e;
+}
+
+.container__principal {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -89,4 +93,12 @@ body {
 
 .btn__fim {
   width: 47.5%;
+}
+
+.rodape {
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */

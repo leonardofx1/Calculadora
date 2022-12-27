@@ -3,6 +3,20 @@ const display = document.querySelector('.display')
 const operador = document.querySelector('.container__aritimeticos')
 const result = document.querySelector('.btn__result')
 const clean= document.querySelector('.btn__clean')
+
+const exiberResultado = () => {
+    const resultado = display.innerText
+    const  resultadoOperacao = eval(resultado)
+    display.innerText = resultadoOperacao
+}
+const limiteNumerico = () => {
+    const limiteNumerico = display.innerText.length > 10
+    if(limiteNumerico){
+        const corte  = display.innerText.slice(0,10) 
+        display.innerText = `${corte}...`
+    }
+}
+
 numeros.addEventListener('click', e => {
     const num = e.target.innerText;
     display.innerText += num;
@@ -14,15 +28,8 @@ operador.addEventListener('click' ,e => {
 })
 
 result.addEventListener('click', () => {
-    const resultado = display.innerText
-    const  resultadoOperacao = eval(resultado)
-    display.innerText = resultadoOperacao
-    const limiteNumerico = display.innerText.length > 10
-    
-    if(limiteNumerico){
-        const corte  = display.innerText.slice(0,10) 
-        display.innerText = `${corte}...`
-    }
+    exiberResultado()
+    limiteNumerico()
 })
 clean.addEventListener('click', () => {
     display.innerText = ''
